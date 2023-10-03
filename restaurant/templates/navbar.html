@@ -1,0 +1,65 @@
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .navbar {
+    background-color: #6d28d9;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar h1 {
+    font-size: 22px;
+    margin: 0;
+    padding: 0 20px;
+    background-color: transparent !important;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 52%;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+  }
+
+  .nav-links a:hover {
+    background-color: #ddd6fe;
+    color: #333;
+    transition: background-color 0.2s ease;
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+  rel="stylesheet"
+/>
+<div class="navbar">
+  <h1>Restaurant Management</h1>
+  <ul class="nav-links">
+    <a href="/">Home</a>
+    <a href="/add_menu">Add Menu Item</a>
+    <a href="/create_order">Add Order</a>
+    <a href="/order_history">Order History</a>
+    <a href="/admin">Admin</a>
+  </ul>
+</div>

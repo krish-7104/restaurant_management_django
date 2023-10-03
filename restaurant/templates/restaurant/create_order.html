@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create Order</title>
     <style>
-      /* Reset some default styles */
       body,
       h1,
       h3,
@@ -15,22 +14,19 @@
         padding: 0;
       }
 
-      /* Apply a background color and set a font family */
       body {
         background-color: #f7f7f7;
         font-family: Arial, sans-serif;
       }
 
-      /* Style the header */
       h1 {
         text-align: center;
         padding: 20px 0;
-        background-color: #007bff;
+        background-color: #6d28d9;
         color: #fff;
         font-size: 28px;
       }
 
-      /* Style the form container */
       .form-container {
         max-width: 600px;
         margin: 40px auto;
@@ -40,14 +36,12 @@
         border-radius: 5px;
       }
 
-      /* Style labels */
       label {
         font-weight: bold;
         display: block;
         margin-bottom: 5px;
       }
 
-      /* Style the input fields */
       input[type="number"],
       input[type="checkbox"] {
         width: 80%;
@@ -58,20 +52,17 @@
         font-size: 16px;
       }
 
-      /* Style the menu items list */
       ul {
         list-style-type: none;
         padding: 0;
       }
 
-      /* Style menu item list items */
       li {
         margin: 10px 0;
         display: flex;
         align-items: center;
       }
 
-      /* Style the custom checkboxes */
       .custom-checkbox {
         position: relative;
         padding-left: 30px;
@@ -96,12 +87,11 @@
       }
 
       .custom-checkbox input[type="checkbox"]:checked + .checkmark {
-        background-color: #007bff;
+        background-color: #6d28d9;
       }
 
-      /* Style the submit button */
       input[type="submit"] {
-        background-color: #007bff;
+        background-color: #6d28d9;
         color: #fff;
         padding: 15px 20px;
         border: none;
@@ -111,14 +101,13 @@
         transition: background-color 0.3s;
       }
 
-      /* Change button color on hover */
       input[type="submit"]:hover {
-        background-color: #0056b3;
+        background-color: #6d28d9;
       }
     </style>
   </head>
   <body>
-    <h1>Create Order</h1>
+    {% include 'navbar.html' %}
     <div class="form-container">
       <form method="post">
         {% csrf_token %}

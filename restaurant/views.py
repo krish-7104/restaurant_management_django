@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, redirect, render
 from .models import MenuItem, Order
+from .forms import MenuItemForm
 
 def main_page(request):
     menu_items = MenuItem.objects.all()
@@ -24,3 +25,23 @@ def create_order(request):
 def order_history(request):
     orders = Order.objects.all()
     return render(request, 'restaurant/order_history.html', {'orders': orders})
+
+def add_menu_item(request):
+    if request.method == 'POST':
+        form = MenuItemForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('menu') 
+    else:
+        form = MenuItemForm()
+    
+    return render(request, 'restaurant/add_menu_item.html', {'form': form})
+
+def complete_order(request, order_id):
+    order = get_object_or_404(Order, pk=order_id)
+    order.is_completed = True
+    order.save()
+    return redirect('order_history')
+
+
+
